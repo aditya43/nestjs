@@ -1,4 +1,13 @@
-import { Controller, Get, Post, Put, Query, Req, Res } from '@nestjs/common';
+import {
+    Controller,
+    Get,
+    Patch,
+    Post,
+    Put,
+    Query,
+    Req,
+    Res,
+} from '@nestjs/common';
 import { Request, Response } from 'express';
 
 @Controller('products')
@@ -26,7 +35,12 @@ export class ProductsController {
     }
 
     @Put('/update')
-    update(_: Request, @Res() res: Response): void {
-        res.send({ message: 'PUT /update route' });
+    put(_: Request, @Res() res: Response): void {
+        res.send({ message: 'PUT /put route' });
+    }
+
+    @Patch('/patch')
+    patch(_: Request, @Res() res: Response): void {
+        res.send({ message: 'PATCH /patch route' });
     }
 }
