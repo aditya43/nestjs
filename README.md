@@ -30,11 +30,15 @@ Open-sourced software licensed under the [MIT license](http://opensource.org/lic
 ```diff
 + Handy CLI Commands
 ```
+- Create Module `Products`:
+    ```sh
+    nest g module Products
+    ```
 - Create Controller `Products`:
     ```sh
     nest g co Products
     ```
-- Create Module `Products`:
+- Create Service `Products`:
     ```sh
-    nest g module Products
+    nest g service Products
     ```
