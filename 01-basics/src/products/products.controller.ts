@@ -2,6 +2,7 @@ import {
     Controller,
     Delete,
     Get,
+    Param,
     Patch,
     Post,
     Put,
@@ -30,9 +31,10 @@ export class ProductsController {
         res.send({ name: 'Aditya Hajare', query });
     }
 
-    @Post('/create')
-    create(_: Request, @Res() res: Response): void {
-        res.send({ message: 'POST /create route' });
+    // POST http://localhost:3000/products/create/aditya
+    @Post('/create/:name')
+    create(_: Request, @Res() res: Response, @Param() param): void {
+        res.send({ message: 'POST /create route', param });
     }
 
     @Put('/update')
