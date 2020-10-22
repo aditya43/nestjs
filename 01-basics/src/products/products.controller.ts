@@ -1,5 +1,6 @@
 import {
     Controller,
+    Delete,
     Get,
     Patch,
     Post,
@@ -42,5 +43,10 @@ export class ProductsController {
     @Patch('/patch')
     patch(_: Request, @Res() res: Response): void {
         res.send({ message: 'PATCH /patch route' });
+    }
+
+    @Delete('/delete')
+    delete(_: Request, @Res() res: Response): void {
+        res.send({ message: 'DELETE /delete route' });
     }
 }
