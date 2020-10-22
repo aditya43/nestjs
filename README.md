@@ -34,3 +34,7 @@ Open-sourced software licensed under the [MIT license](http://opensource.org/lic
     ```sh
     nest g co Products
     ```
+- Create Module `Products`:
+    ```sh
+    nest g module Products
+    ```
