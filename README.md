@@ -26,3 +26,11 @@ Open-sourced software licensed under the [MIT license](http://opensource.org/lic
     ```sh
     nest new PROJECT_NAME
     ```
+
+```diff
++ Handy CLI Commands
+```
+- Create Controller `Products`:
+    ```sh
+    nest g co Products
+    ```
