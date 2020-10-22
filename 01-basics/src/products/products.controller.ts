@@ -1,4 +1,4 @@
-import { Controller, Get, Query, Req, Res } from '@nestjs/common';
+import { Controller, Get, Post, Put, Query, Req, Res } from '@nestjs/common';
 import { Request, Response } from 'express';
 
 @Controller('products')
@@ -18,5 +18,15 @@ export class ProductsController {
     reqRes(@Req() req: Request, @Res() res: Response, @Query() query): void {
         console.log(req);
         res.send({ name: 'Aditya Hajare', query });
+    }
+
+    @Post('/create')
+    create(_: Request, @Res() res: Response): void {
+        res.send({ message: 'POST /create route' });
+    }
+
+    @Put('/update')
+    update(_: Request, @Res() res: Response): void {
+        res.send({ message: 'PUT /update route' });
     }
 }
