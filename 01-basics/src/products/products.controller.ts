@@ -1,4 +1,14 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
 
 @Controller('products')
-export class ProductsController {}
+export class ProductsController {
+    @Get()
+    roottGet(): string {
+        return 'Root path GET route';
+    }
+
+    @Get('/custom-get')
+    customGet(): string {
+        return 'Custom path GET route';
+    }
+}
